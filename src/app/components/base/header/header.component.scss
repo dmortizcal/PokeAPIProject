@@ -1,0 +1,19 @@
+@import "../../../../assets/styles/constants";
+
+.header {
+    background: $primary;
+    margin: 0;
+    padding: 10px;
+  align-items: center;
+  display: flex;
+
+    a {
+      padding: 0 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    img {
+      height: 2.7rem;
+  }
+}

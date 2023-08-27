@@ -1,0 +1,501 @@
+@import "constants";
+@import 'primeng/resources/themes/saga-blue/theme.css';
+
+.card-container .left-panel,
+.card-container .top-panel {
+  background: linear-gradient(80deg, darken($primary, 10%), lighten($primary, 20%));
+}
+
+.back-container {
+  background-size: 20%;
+  background-blend-mode: screen;
+  background-color: #D5D5D5;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight,
+.p-radiobutton .p-radiobutton-box.p-highlight,
+.p-selectbutton .p-button.p-highlight,
+.p-slider:not(.p-disabled) .p-slider-handle:hover,
+.p-togglebutton.p-button.p-highlight,
+.fc .fc-toolbar .fc-button.fc-dayGridMonth-button.fc-button-active,
+.fc .fc-toolbar .fc-button.fc-timeGridWeek-button.fc-button-active,
+.fc .fc-toolbar .fc-button.fc-timeGridDay-button.fc-button-active {
+  border-color: $primary;
+  background: $primary;
+}
+
+.p-input-filled .p-checkbox .p-checkbox-box.p-highlight,
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider,
+.p-input-filled .p-radiobutton .p-radiobutton-box.p-highlight,
+.p-slider .p-slider-range,
+.p-datatable .p-column-resizer-helper,
+.p-treetable .p-column-resizer-helper,
+.p-overlaypanel .p-overlaypanel-close,
+.p-badge,
+.p-progressbar .p-progressbar-value,
+.p-tag {
+  background: $primary;
+}
+
+.p-editor-container .ql-snow.ql-toolbar button.ql-active,
+.p-editor-container .ql-snow.ql-toolbar .ql-picker-label.ql-active,
+.p-editor-container .ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+.p-editor-container .ql-snow.ql-toolbar button.ql-active .ql-picker-label,
+.p-editor-container .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-picker-label,
+.p-editor-container .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-picker-label,
+.p-rating .p-rating-icon.pi-star,
+.p-rating:not(.p-disabled):not(.p-readonly) .p-rating-icon:hover,
+.p-button.p-button-outlined,
+.p-button.p-button-outlined:enabled:hover,
+.p-button.p-button-outlined:enabled:active,
+.p-button.p-button-text,
+.p-button.p-button-text:enabled:hover,
+.p-button.p-button-text:not(a):not(.p-disabled):hover,
+.p-button.p-button-text:enabled:active,
+.p-button.p-button-text:not(a):not(.p-disabled):active,
+.p-button.p-button-outlined:not(a):not(.p-disabled):hover,
+.p-button .p-badge,
+.p-datatable .p-sortable-column.p-highlight,
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon,
+.p-datatable .p-sortable-column.p-highlight:hover,
+.p-datatable .p-sortable-column.p-highlight:not(.p-sortable-disabled):hover,
+.p-datatable .p-sortable-column.p-highlight:hover .p-sortable-column-icon,
+.p-datatable .p-sortable-column.p-highlight:not(.p-sortable-disabled):hover .p-sortable-column-icon,
+.p-treetable .p-sortable-column.p-highlight,
+.p-treetable .p-sortable-column.p-highlight .p-sortable-column-icon,
+a {
+  color: $primary;
+}
+
+.p-editor-container .ql-snow.ql-toolbar button.ql-active .ql-stroke,
+.p-editor-container .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+.p-editor-container .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke {
+  stroke: $primary;
+}
+
+.p-editor-container .ql-snow.ql-toolbar button.ql-active .ql-fill,
+.p-editor-container .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+.p-editor-container .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill {
+  fill: $primary;
+}
+
+.p-autocomplete .p-autocomplete-multiple-container:not(.p-disabled):hover,
+.p-cascadeselect:not(.p-disabled):hover,
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover,
+.p-chips .p-chips-multiple-container:not(.p-disabled):hover,
+.p-dropdown:not(.p-disabled):hover,
+.p-inputtext:enabled:hover,
+.p-multiselect:not(.p-disabled):hover,
+.p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+  border-color: $primary;
+}
+
+.p-autocomplete .p-autocomplete-multiple-container:not(.p-disabled).p-focus,
+.p-datepicker .p-datepicker-header .p-datepicker-title select:focus,
+.p-cascadeselect:not(.p-disabled).p-focus,
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus,
+.p-chips .p-chips-multiple-container:not(.p-disabled).p-focus,
+.p-dropdown:not(.p-disabled).p-focus,
+.p-inputtext:enabled:focus,
+.p-multiselect:not(.p-disabled).p-focus,
+.p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+  box-shadow: 0 0 0 0.2rem rgba($color: $primary, $alpha: 0.24);
+  border-color: $primary;
+}
+
+.p-slider .p-slider-handle,
+.p-timeline .p-timeline-event-marker {
+  border: 2px solid $primary;
+}
+
+.p-button,
+.fc .fc-toolbar .fc-button {
+  background: $primary;
+  border: 1px solid $primary;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link,
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
+  border-color: $primary;
+  color: $primary;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button,
+.p-galleria .p-galleria-indicators .p-galleria-indicator.p-highlight button {
+  background-color: $primary;
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover,
+.p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover,
+.p-button:enabled:active,
+.fc .fc-toolbar .fc-button:enabled:active,
+.p-fileupload-choose:not(.p-disabled):active {
+  border-color: darken($primary, 10%);
+  background: darken($primary, 10%);
+}
+
+.p-input-filled .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover,
+.p-input-filled .p-radiobutton .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+  background: darken($primary, 10%);
+}
+
+.p-button.p-button-link,
+.p-button.p-button-link:enabled:hover,
+.p-button.p-button-link:enabled:active {
+  color: darken($primary, 10%);
+}
+
+.p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider,
+.p-selectbutton .p-button.p-highlight:hover,
+.p-overlaypanel .p-overlaypanel-close:enabled:hover {
+  background: darken($primary, 7%);
+}
+
+.p-togglebutton.p-button.p-highlight:hover,
+.p-button:enabled:hover,
+.p-button:not(a):not(.p-disabled):hover,
+.p-button:not(a):not(.p-disabled):active,
+.fc .fc-toolbar .fc-button:enabled:hover,
+.fc .fc-toolbar .fc-button.fc-dayGridMonth-button.fc-button-active:hover,
+.fc .fc-toolbar .fc-button.fc-timeGridWeek-button.fc-button-active:hover,
+.fc .fc-toolbar .fc-button.fc-timeGridDay-button.fc-button-active:hover,
+.p-fileupload-choose:not(.p-disabled):hover {
+  background: darken($primary, 7%);
+  border-color: darken($primary, 7%);
+}
+
+.fc .fc-view-container .fc-event {
+  background: darken($primary, 7%);
+  border: 1px solid darken($primary, 7%);
+}
+
+.p-datepicker .p-timepicker button:focus,
+.p-datepicker:not(.p-disabled) .p-monthpicker .p-monthpicker-month:not(.p-highlight):not(.p-disabled):focus,
+.p-inputswitch.p-focus .p-inputswitch-slider,
+.p-multiselect-panel .p-multiselect-header .p-multiselect-close:focus,
+.p-rating .p-rating-icon:focus,
+.p-slider .p-slider-handle:focus,
+.p-button:focus,
+.p-button.p-button-link:enabled:focus,
+.p-carousel .p-carousel-content .p-carousel-prev:focus,
+.p-carousel .p-carousel-content .p-carousel-next:focus,
+.p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-init:focus,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-save:focus,
+.p-datatable .p-datatable-tbody > tr > td .p-row-editor-cancel:focus,
+.p-column-filter-menu-button:focus,
+.p-column-filter-clear-button:focus,
+.fc .fc-toolbar .fc-button:enabled:active:focus,
+.fc .fc-toolbar .fc-button:focus,
+.fc .fc-toolbar .fc-button.fc-dayGridMonth-button:focus,
+.fc .fc-toolbar .fc-button.fc-timeGridWeek-button:focus,
+.fc .fc-toolbar .fc-button.fc-timeGridDay-button:focus,
+.p-organizationchart .p-organizationchart-node-content .p-node-toggler:focus,
+.p-message .p-message-close:focus,
+.p-toast .p-toast-message .p-toast-icon-close:focus,
+.p-galleria .p-galleria-thumbnail-container .p-galleria-thumbnail-item-content:focus,
+.p-chip .pi-chip-remove-icon:focus,
+.p-inplace .p-inplace-display:focus,
+.p-tree .p-tree-container .p-treenode .p-treenode-content .p-tree-toggler:focus,
+.p-tree .p-tree-container .p-treenode .p-treenode-content:focus,
+.p-tree.p-tree-horizontal .p-treenode .p-treenode-content:focus,
+.p-treetable .p-treetable-tbody > tr > td .p-treetable-toggler:focus,
+.p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus,
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a:focus,
+.p-panel .p-panel-header .p-panel-header-icon:focus,
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus,
+.p-dialog .p-dialog-header .p-dialog-header-icon:focus,
+.p-sidebar .p-sidebar-close:focus,
+.p-fileupload .p-fileupload-buttonbar .p-button.p-fileupload-choose.p-focus,
+.p-breadcrumb ul li .p-menuitem-link:focus,
+.p-panelmenu .p-panelmenu-header > a:focus,
+.p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus,
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+  box-shadow: 0 0 0 0.2rem rgba($color: $primary, $alpha: 0.24);
+}
+
+.p-cascadeselect-panel .p-cascadeselect-items .p-cascadeselect-item .p-cascadeselect-item-content:focus,
+.p-listbox .p-listbox-list .p-listbox-item:focus,
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item:focus,
+.p-datatable .p-sortable-column:focus,
+.p-column-filter-overlay .p-column-filter-row-items .p-column-filter-row-item:focus,
+.p-orderlist .p-orderlist-list .p-orderlist-item:focus,
+.p-picklist .p-picklist-list .p-picklist-item:focus,
+.p-contextmenu .p-menuitem-link:focus,
+.p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link:focus,
+.p-megamenu .p-menuitem-link:focus,
+.p-menu .p-menuitem-link:focus,
+.p-menubar .p-menuitem-link:focus,
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus,
+.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link:focus,
+.p-slidemenu .p-menuitem-link:focus,
+.p-tieredmenu .p-menuitem-link:focus {
+  box-shadow: inset 0 0 0 0.15rem rgba($color: lighten($primary, 40%), $alpha: 0.5);
+}
+
+.p-multiselect.p-multiselect-chip .p-multiselect-token,
+.p-datatable .p-sortable-column .p-sortable-column-badge,
+.p-datatable .p-datatable-tbody > tr.p-highlight,
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even).p-highlight,
+.p-column-filter-overlay .p-column-filter-row-items .p-column-filter-row-item.p-highlight,
+.p-orderlist .p-orderlist-list .p-orderlist-item.p-highlight,
+.p-organizationchart .p-organizationchart-node-content.p-highlight,
+.p-picklist .p-picklist-list .p-picklist-item.p-highlight,
+.p-tree .p-tree-container .p-treenode .p-treenode-content.p-highlight,
+.p-treetable .p-sortable-column .p-sortable-column-badge,
+.p-treetable .p-treetable-tbody > tr.p-highlight,
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight,
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight,
+.p-datepicker table td > span.p-highlight {
+  background: rgba($color: $primary, $alpha: 0.12);
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  outline-color: rgba($color: lighten($primary, 40%), $alpha: 0.5);
+}
+
+.p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-top > td {
+  box-shadow: inset 0 2px 0 0 lighten($primary, 70%);
+}
+
+.p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-bottom > td {
+  box-shadow: inset 0 -2px 0 0 lighten($primary, 70%);
+}
+
+.p-orderlist .p-orderlist-list .p-orderlist-droppoint.p-orderlist-droppoint-highlight,
+.p-picklist .p-picklist-list .p-picklist-droppoint.p-picklist-droppoint-highlight,
+.p-tree .p-treenode-droppoint.p-treenode-droppoint-active {
+  background-color: lighten($primary, 30%);
+}
+
+.p-organizationchart .p-organizationchart-node-content.p-highlight .p-node-toggler i {
+  color: lighten($primary, 20%);
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: rgba($color: $primary, $alpha: 0.12);
+  border-color: rgba($color: $primary, $alpha: 0.12);
+}
+
+.p-tree.p-tree-horizontal .p-treenode .p-treenode-content.p-highlight {
+  background-color: lighten($primary, 70%);
+}
+
+.p-treetable .p-sortable-column,
+.p-treetable .p-treetable-tbody > tr {
+  outline-color: rgba($color: lighten($primary, 40%), $alpha: 0.5);
+}
+
+.p-button.p-button-text:enabled:hover,
+.p-button.p-button-outlined:not(a):not(.p-disabled):hover,
+.p-button.p-button-text:not(a):not(.p-disabled):hover {
+  background-color: rgba($color: $primary, $alpha: 0.04);
+}
+
+.p-button.p-button-text:enabled:active,
+.p-button.p-button-text:not(a):not(.p-disabled):active {
+  background-color: rgba($color: $primary, $alpha: 0.16);
+}
+
+/**
+  Custom styles
+ */
+.p-toast .p-toast-message {
+  border: none !important;
+  border-radius: 4px;
+}
+
+.p-datatable .p-datatable-tbody > tr > td .p-column-title {
+  display: none;
+}
+
+.p-datatable .actions {
+  margin: 0 auto;
+  display: table;
+}
+
+.p-datatable {
+  @media screen and (max-width: 40em) {
+    .p-datatable-thead > tr > th,
+    .p-datatable-tfoot > tr > td {
+      display: none !important;
+    }
+
+    .p-datatable-tbody > tr > td {
+      text-align: left;
+      display: block;
+      width: 100%;
+      float: left;
+      clear: left;
+      border: 0 none;
+    }
+
+    .p-datatable-tbody > tr > td .p-column-title {
+      padding: 0.4rem;
+      min-width: 30%;
+      display: inline-block;
+      margin: -0.4em 1em -0.4em -0.4rem;
+      font-weight: bold;
+    }
+
+    .p-datatable-tbody > tr > td:last-child {
+      border-bottom: 1px solid var(--surface-d);
+    }
+
+    .p-paginator-report {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+.p-datatable {
+  border: 1px solid #e9ecef;
+  overflow: hidden;
+  border-radius: 4px;
+
+  .p-datatable-header {
+    border-width: 0 0 1px 0;
+  }
+
+  .p-column-filter {
+    width: 100%;
+  }
+
+  .p-paginator-bottom {
+    border: none;
+  }
+}
+
+.p-button:enabled:focus,
+.p-buttonset > .p-button:enabled:focus,
+.p-splitbutton > .p-button:enabled:focus,
+.p-dialog .p-dialog-header .p-dialog-header-icon:focus,
+.p-link:focus,
+.p-datepicker table td > span:focus {
+  box-shadow: none !important;
+}
+
+.p-menu {
+  padding: 0.5rem 0;
+}
+
+.p-tooltip {
+  .p-tooltip-arrow {
+    display: none;
+  }
+
+  .p-tooltip-text {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.p-dialog {
+  .p-dialog-content {
+    padding: 0.5rem 1.5rem;
+
+    .p-field:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .p-dialog-footer {
+    padding: 1.5rem;
+
+    .p-button:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.popup-lang .p-menuitem.active {
+  background: rgba($color: $primary, $alpha: 0.12);
+}
+
+.p-dialog {
+  margin: 0 1.5rem;
+
+  &.preview-file-dialog .p-dialog-content {
+    padding: 0;
+  }
+}
+
+.p-datatable-toolbar {
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.p-panel-toolbar-action {
+  background: transparent;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  padding: 6px 14px;
+  border-radius: 0;
+  margin: 0;
+}
+
+.p-panel-toolbar {
+  background: transparent;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  padding: 14px;
+  border-radius: 0;
+  margin: 0;
+}
+
+.p-card .p-card-content {
+  padding: 1rem 0 0.5rem 0;
+}
+
+.p-fluid .p-button-icon-only {
+  width: 2.357rem !important;
+}
+
+.person-card {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+  border-radius: 3px;
+
+  .bottom-line {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 2px 2px;
+  }
+
+  .image-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+  }
+}
+
+button.p-button.p-component.p-custom-icon {
+  flex-direction: row-reverse;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .p-fileupload-row {
+    align-items: inherit;
+    flex-direction: column;
+
+    > div {
+      width: auto;
+    }
+  }
+
+  .p-fluid .p-fileupload .p-button.p-button-icon-only {
+    width: 2.357rem;
+  }
+}
