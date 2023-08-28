@@ -1,0 +1,43 @@
+<div class="container">
+
+  <p-table [value]="pokemonList"
+           dataKey="id"
+           [loading]="loading">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Acciones</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-pokemon>
+      <tr>
+        <td>{{ pokemon.id }}</td>
+        <td>
+          <img src="{{pokemon.image}}" width="32" alt=""/>
+          <span class="ml-1 vertical-align-middle">{{ namePoke(pokemon.name) }}</span>
+        </td>
+        <td>
+          <p-button icon="pi pi-check" styleClass="p-button-rounded p-button-text"
+                    pTooltip="Detalles"/>
+          <p-button icon="pi pi-window-maximize" styleClass="p-button-rounded p-button-text"
+                    pTooltip="Abrir en otra ventana"/>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="7">No se encontraron resultados.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-paginator
+    [rows]="itemsPerPage"
+    [totalRecords]="totalCount"
+    [pageLinkSize]="3"
+    (onPageChange)="onPageChange($event)"/>
+
+</div>

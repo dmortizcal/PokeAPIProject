@@ -50,6 +50,7 @@ import { SkeletonModule } from 'primeng/skeleton';
 import { SliderModule } from 'primeng/slider';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { StepsModule } from 'primeng/steps';
+import { TableModule } from 'primeng/table';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { TabViewModule } from 'primeng/tabview';
 import { TagModule } from 'primeng/tag';
@@ -119,6 +120,7 @@ import {NgModule} from "@angular/core";
     SliderModule,
     SplitButtonModule,
     StepsModule,
+    TableModule,
     TabMenuModule,
     TabViewModule,
     TagModule,
