@@ -31,3 +31,132 @@ body {
   margin-bottom: 1rem;
 }
 
+@font-face {
+  font-family: 'PokemonFontHollow';
+  src: url('/assets/fonts/Pokemon-Hollow.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PokemonFontSolid';
+  src: url('/assets/fonts/Pokemon-Solid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.customer-badge {
+  border-radius: 50px;
+  padding: 0.25em 0.5rem;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+
+
+  &.status-water {
+    background-color: #4275ee;
+    color: #ffffff;
+  }
+
+  &.status-fire {
+    background-color: #fa2f2f;
+    color: #ffffff;
+  }
+
+  &.status-grass {
+    background-color: #78C850;
+    color: #ffffff;
+  }
+
+  &.status-electric {
+    background-color: #F8D030;
+    color: #ffffff;
+  }
+
+  &.status-flying {
+    background-color: #A890F0;
+    color: #ffffff;
+  }
+
+  &.status-normal {
+    background-color: #A8A878;
+    color: #ffffff;
+  }
+
+  &.status-fighting {
+    background-color: #f6692c;
+    color: #ffffff;
+  }
+
+  &.status-psychic {
+    background-color: #F85888;
+    color: #ffffff;
+  }
+
+  &.status-poison {
+    background-color: #A040A0;
+    color: #ffffff;
+  }
+
+  &.status-ground {
+    background-color: #E0C068;
+    color: #ffffff;
+  }
+
+  &.status-rock {
+    background-color: #B8A038;
+    color: #ffffff;
+  }
+
+  &.status-bug {
+    background-color: #075013;
+    color: #ffffff;
+  }
+
+  &.status-ice {
+    background-color: #98D8D8;
+    color: #ffffff;
+  }
+
+  &.status-dragon {
+    background-color: #7038F8;
+    color: #ffffff;
+  }
+
+  &.status-dark {
+    background-color: #705848;
+    color: #ffffff;
+  }
+
+  &.status-fairy {
+    background-color: #EE99AC;
+    color: #ffffff;
+  }
+
+  &.status-steel {
+    background-color: #B8B8D0;
+    color: #ffffff;
+  }
+
+  &.status-ghost {
+    background-color: #705898;
+    color: #ffffff;
+  }
+
+  &.status-unknown {
+    background-color: #797979;
+    color: #ffffff;
+  }
+
+  &.status-shadow {
+    background-color: #1a1a1a ;
+    color: #ffffff;
+  }
+}
+
+.poke-font {
+  font-family: 'PokemonFontSolid', sans-serif;
+  color: #FFD700; /* Color amarillo para el texto */
+  text-shadow: -2px -2px 0 #0074D9, 2px -2px 0 #0074D9, -2px 2px 0 #0074D9, 2px 2px 0 #0074D9; /* Color azul para el borde */
+}

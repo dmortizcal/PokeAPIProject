@@ -11,6 +11,9 @@ import { FooterComponent } from './components/base/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PokemonDetailsComponent } from './components/pokemon/pokemon-details/pokemon-details.component';
+import { AbilityComponent } from './components/ability/ability.component';
+import { TypeComponent } from './components/type/type.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     FooterComponent,
     HomeComponent,
     PokemonComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PokemonDetailsComponent,
+    AbilityComponent,
+    TypeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,82 +1,35 @@
 <div class="container">
-  <div *ngIf="loading" class="flex align-items-center justify-content-center">
-    <p-progressSpinner/>
-  </div>
+  <h1 class="poke-font">PoKéMoN List</h1>
+  <br/>
 
-  <div *ngIf="!loading">
-    <h1>{{ namePoke(pokemon.name) }}</h1>
-
-    <div class="grid">
-      <div class="col-12 md:col-12 lg:col-4">
-        <div class="flex align-items-center justify-content-center">
-          <div class="circle-container">
-            <img src="{{pokemon.sprites.other['official-artwork'].front_default}}"
-                 class="circle-image" alt="">
+  <div class="grid">
+    <div class="col-6 md:col-4 lg:col-3" *ngFor="let pokemon of pokemonList">
+      <p-card header="{{namePoke(pokemon?.name ?? '')}}" class="card">
+        <ng-template pTemplate="header">
+          <div class="flex align-items-center justify-content-center">
+            <img alt="img poke" src="{{pokemon.image}}" style="width: 150px"/>
           </div>
+        </ng-template>
+        <div style="display: flex; flex-wrap: wrap">
+          <span *ngFor="let type of pokemon.types" class="customer-badge status-{{type.type.name}}"
+                style="margin-right: 5px">
+            {{namePoke(type.type.name ?? '')}}
+          </span>
         </div>
-      </div>
-
-      <div class="col-12 md:col-12 lg:col-8">
-        <div class="grid">
-          <div class="col-12 md:col-4 lg:col-4">
-            <h2>Basic</h2>
-
-            <div class="id-container">
-              <b>Id:</b>
-              <p>{{ pokemon.id }}</p>
-            </div>
-
-            <div class="id-container">
-              <b>Name:</b>
-              <p>{{  namePoke(pokemon.name) }}</p>
-            </div>
-
-            <div class="id-container">
-              <b>Height:</b>
-              <p>{{ pokemon.height }}</p>
-            </div>
-
-            <div class="id-container">
-              <b>Weight:</b>
-              <p>{{ pokemon.weight }}</p>
-            </div>
+        <ng-template pTemplate="footer">
+          <div class="flex align-items-end justify-content-end">
+            <p-button label="View Details" icon="pi pi-check"
+                      (click)="goToPokemon(pokemon.name ?? '')"/>
           </div>
-
-          <div class="col-6 md:col-4 lg:col-4">
-            <h2>Abilities</h2>
-            <div *ngFor="let ability of pokemon.abilities">
-              <p>{{namePoke(ability.ability.name)}}</p>
-            </div>
-          </div>
-
-
-          <div class="col-6 md:col-4 lg:col-4">
-            <h2>Types</h2>
-            <div *ngFor="let type of pokemon.types">
-              <p>{{namePoke(type.type.name)}}</p>
-            </div>
-          </div>
-
-          <div class="col-12 md:col-12 lg:col-12">
-            <h2>Moves</h2>
-            <div class="moves-container">
-              <p *ngFor="let move of pokemon.moves; let last = last" class="move-item">
-                {{ namePoke(move.move.name) }}{{ !last ? ',' : '.' }}
-              </p>
-            </div>
-          </div>
-
-          <div class="col-12 md:col-12 lg:col-12">
-            <h2>Stats</h2>
-            <div class="card">
-              <p-chart type="line" [data]="dataChart" [options]="optionsChart"></p-chart>
-            </div>
-          </div>
-        </div>
-      </div>
-
+        </ng-template>
+      </p-card>
     </div>
   </div>
 
+  <p-paginator
+    [rows]="itemsPerPage"
+    [totalRecords]="totalCount"
+    [pageLinkSize]="3"
+    (onPageChange)="onPageChange($event)"/>
 
 </div>

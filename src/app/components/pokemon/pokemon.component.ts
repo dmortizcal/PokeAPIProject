@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {PokemonListModel} from "../../models/PokemonListModel";
 import {ApiRestService} from "../../services/api-rest.service";
-import {PokemonModel} from "../../models/PokemonModel";
-import {StatModel} from "../../models/StatModel";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-pokemon',
@@ -10,91 +9,72 @@ import {StatModel} from "../../models/StatModel";
   styleUrls: ['./pokemon.component.scss']
 })
 export class PokemonComponent implements OnInit {
-  loading: boolean = false
-  dataChart: any;
-  optionsChart: any;
-  pokemon: PokemonModel = {
-    sprites: {
-      other: {
-        "official-artwork": {
-          front_default: ""
-        }
-      }
-    }
-  }
-  namePokemon: string = ""
+  pokemonList: PokemonListModel[] = [];
+  totalCount: number = 0;
+  itemsPerPage: number = 12;
+  currentPage: number = 1;
+  loading: boolean = false;
 
   constructor(
-    private route: ActivatedRoute,
     private apiRest: ApiRestService,
     private router: Router,
   ) {
-    this.namePokemon = this.route.snapshot.paramMap.get('name') ?? '';
   }
 
-  namePoke(name?: string): string {
-    if (name !== undefined) {
-      return name.charAt(0).toUpperCase() + name.slice(1);
-    } else return ""
+  onPageChange(event: any): void {
+    this.currentPage = event.page + 1;
+    const offset = this.currentPage * this.itemsPerPage - this.itemsPerPage;
+    const url = `pokemon?offset=${offset}&limit=${this.itemsPerPage}`;
+    this.loadPokemonList(url);
   }
 
-  newDataChart(stats?: StatModel[]) {
-    const labels = stats?.map(item => {
-      const name = item.stat.name;
-      if (name !== undefined) {
-        return name?.charAt(0).toUpperCase() + name?.slice(1)
-      } else return '';
-    });
-
-    const baseStats = stats?.map(item => item.base_stat);
-    const effortStats = stats?.map(item => item.effort);
-
-    this.dataChart = {
-      labels: labels,
-      datasets: [
-        {
-          label: 'Battle Stat',
-          data: baseStats,
-          fill: false,
-          backgroundColor: '#FF9999',
-          borderColor: '#FF9999',
-          tension: 0.4
-        },
-        {
-          label: 'Effort Values',
-          data: effortStats,
-          fill: false,
-          backgroundColor: '#EFC907',
-          borderColor: '#EFC907',
-          tension: 0.4
-        }
-      ]
-    };
-
-    this.optionsChart = {
-      maintainAspectRatio: false,
-      aspectRatio: 0.6,
-    }
+  namePoke(name: string): string {
+    return name.charAt(0).toUpperCase() + name.slice(1);
   }
 
-  ngOnInit() {
-    const name = this.route.snapshot.paramMap.get('name');
+  loadPokemonList(url: string) {
+    this.pokemonList = []
     this.loading = true;
 
-    this.apiRest.get(`pokemon/${name}`).then(
+    this.apiRest.get(url).then(
       (data: any) => {
-        this.pokemon = data as PokemonModel
-        this.newDataChart(this.pokemon.stats)
+        this.totalCount = data["count"]
+
+        data.results.forEach((poke: any) => {
+          this.apiRest.get(poke.url).then((detailPoke: any) => {
+              const pokemon: PokemonListModel = {
+                id: detailPoke.id,
+                name: poke.name,
+                image: detailPoke.sprites.other["official-artwork"].front_default,
+                types: detailPoke.types,
+                url: poke.url
+              }
+              this.pokemonList.push(pokemon)
+            }
+          ).catch(err => {
+            console.log(err)
+          })
+        })
+        console.log(this.pokemonList)
+        this.loading = false;
+      },
+      error => {
         this.loading = false
-      }, error => {
-        this.loading = false
-        this.router.navigate(['no-encontrado'])
         console.log(error)
       }
     ).catch(error => {
       this.loading = false
       console.log(error)
     })
+  }
+
+  goToPokemon(name: string) {
+    this.router.navigate(['pokemon/', name]);
+  }
+
+
+  ngOnInit(): void {
+    this.loadPokemonList(`pokemon/?offset=0&limit=${this.itemsPerPage}`)
   }
 
 }

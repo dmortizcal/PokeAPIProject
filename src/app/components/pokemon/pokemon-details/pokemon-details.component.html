@@ -1,0 +1,84 @@
+<div class="container">
+  <div *ngIf="loading" class="flex align-items-center justify-content-center">
+    <p-progressSpinner/>
+  </div>
+
+  <div *ngIf="!loading">
+    <h1 class="poke-font">{{ namePoke(pokemon.name) }}</h1>
+
+    <div class="grid">
+      <div class="col-12 md:col-12 lg:col-4">
+        <div class="flex align-items-center justify-content-center">
+          <div class="circle-container">
+            <img src="{{pokemon.sprites.other['official-artwork'].front_default}}"
+                 class="circle-image" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 md:col-12 lg:col-8">
+        <div class="grid">
+          <div class="col-12 md:col-4 lg:col-4">
+            <h2>Basic</h2>
+
+            <div class="id-container">
+              <b>Id:</b>
+              <p>{{ pokemon.id }}</p>
+            </div>
+
+            <div class="id-container">
+              <b>Name:</b>
+              <p>{{  namePoke(pokemon.name) }}</p>
+            </div>
+
+            <div class="id-container">
+              <b>Height:</b>
+              <p>{{ pokemon.height }}</p>
+            </div>
+
+            <div class="id-container">
+              <b>Weight:</b>
+              <p>{{ pokemon.weight }}</p>
+            </div>
+          </div>
+
+          <div class="col-6 md:col-4 lg:col-4">
+            <h2>Abilities</h2>
+            <div *ngFor="let ability of pokemon.abilities">
+              <p>{{namePoke(ability.ability.name)}}</p>
+            </div>
+          </div>
+
+
+          <div class="col-6 md:col-4 lg:col-4">
+            <h2>Types</h2>
+            <div *ngFor="let type of pokemon.types" style="margin: 10px">
+              <span class="customer-badge status-{{type.type.name}}">
+                {{namePoke(type.type.name ?? '')}}
+              </span>
+            </div>
+          </div>
+
+          <div class="col-12 md:col-12 lg:col-12">
+            <h2>Moves</h2>
+            <div class="moves-container">
+              <p *ngFor="let move of pokemon.moves; let last = last" class="move-item">
+                {{ namePoke(move.move.name) }}{{ !last ? ',' : '.' }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 md:col-12 lg:col-12">
+            <h2>Stats</h2>
+            <div class="card">
+              <p-chart type="line" [data]="dataChart" [options]="optionsChart"></p-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

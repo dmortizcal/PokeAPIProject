@@ -1,5 +1,5 @@
 export interface BasicModel {
-  "id": number,
+  "id"?: number,
   "name"?: string,
 
   [key: string]: any;

@@ -4,6 +4,9 @@ import {BaseComponent} from "./components/base/base.component";
 import {HomeComponent} from "./components/home/home.component";
 import {PokemonComponent} from "./components/pokemon/pokemon.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {PokemonDetailsComponent} from "./components/pokemon/pokemon-details/pokemon-details.component";
+import {AbilityComponent} from "./components/ability/ability.component";
+import {TypeComponent} from "./components/type/type.component";
 
 const routes: Routes = [
   {
@@ -15,9 +18,22 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
+        path: 'pokemon',
+        component: PokemonComponent,
+      },
+      {
         path: 'pokemon/:name',
-        component: PokemonComponent
-      }]
+        component: PokemonDetailsComponent
+      },
+      {
+        path: 'abilities',
+        component: AbilityComponent,
+      },
+      {
+        path: 'types',
+        component: TypeComponent,
+      },
+    ]
   },
   {
     path: 'no-encontrado',

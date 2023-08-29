@@ -5,7 +5,6 @@ export interface AbilityModel {
   "is_hidden": boolean,
   "slot": number
 
-
   [key: string]: any;
 
 }

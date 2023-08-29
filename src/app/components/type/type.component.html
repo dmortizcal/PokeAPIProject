@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="poke-font">Types List</h1>
+  <br/>
+
+  <p-table [value]="types">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>Flag</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-type>
+      <tr>
+        <td>{{ nameType(type.name)}}</td>
+        <td>
+          <span class="customer-badge status-{{type.name}}"
+                style="margin-right: 5px">
+            {{nameType(type.name ?? '')}}
+          </span>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-paginator
+    [rows]="itemsPerPage"
+    [totalRecords]="totalCount"
+    [pageLinkSize]="3"
+    (onPageChange)="onPageChange($event)"/>
+</div>

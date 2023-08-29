@@ -1,0 +1,44 @@
+@import "src/assets/styles/constants";
+
+.circle-container {
+  position: relative; /* Establece el contexto de posicionamiento */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* Ajusta el tamaño del círculo */
+  height: 300px; /* Ajusta el tamaño del círculo */
+  border-radius: 50%; /* Aplica la forma circular */
+  border: 1px ridge $primary; /* Agrega un borde de 1px */
+  overflow: hidden; /* Recorta la imagen para que quepa dentro del círculo */
+  background-color: white; /* Cambia el color de fondo a blanco */
+}
+
+.circle-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.id-container {
+  display: flex;
+  align-items: center;
+
+  b {
+    margin-right: 5px; /* Ajusta el espaciado entre "b:" y el valor "p"*/
+  }
+
+  p {
+    margin: 5px;
+  }
+}
+
+.moves-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.move-item {
+  display: inline-block;
+  margin: 5px;
+}

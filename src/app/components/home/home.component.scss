@@ -1,0 +1,19 @@
+@import "src/assets/styles/constants";
+
+:host ::ng-deep {
+  .p-button {
+    color: white;
+    background-color: $primary;
+    border: 1px solid $primary;
+    transition: $primary;
+  }
+
+  .p-button:hover {
+    background-color: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+p {
+  height: 130px;
+}
