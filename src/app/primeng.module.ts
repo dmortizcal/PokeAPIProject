@@ -1,29 +1,37 @@
 import { AccordionModule } from 'primeng/accordion';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 import { BadgeModule } from 'primeng/badge';
-import { BlockUIModule } from 'primeng/blockui';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
-import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { ChartModule } from 'primeng/chart';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ChipModule } from 'primeng/chip';
-import { ColorPickerModule } from 'primeng/colorpicker';
+import { ChipsModule } from 'primeng/chips';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ColorPickerModule } from 'primeng/colorpicker';
 import { ContextMenuModule } from 'primeng/contextmenu';
 import { DataViewModule } from 'primeng/dataview';
+import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { DialogModule } from 'primeng/dialog';
 import { DividerModule } from 'primeng/divider';
+import { DockModule } from 'primeng/dock';
 import { DropdownModule } from 'primeng/dropdown';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { FieldsetModule } from 'primeng/fieldset';
 import { FileUploadModule } from 'primeng/fileupload';
+import { GalleriaModule } from 'primeng/galleria';
 import { InplaceModule } from 'primeng/inplace';
 import { InputMaskModule } from 'primeng/inputmask';
-import { InputNumberModule } from 'primeng/inputnumber';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ImageModule } from 'primeng/image';
 import { KnobModule } from 'primeng/knob';
 import { ListboxModule } from 'primeng/listbox';
 import { MegaMenuModule } from 'primeng/megamenu';
@@ -41,17 +49,21 @@ import { PasswordModule } from 'primeng/password';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RatingModule } from 'primeng/rating';
-import { RippleModule } from 'primeng/ripple';
+import { ScrollerModule } from 'primeng/scroller';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SidebarModule } from 'primeng/sidebar';
 import { SkeletonModule } from 'primeng/skeleton';
+import { SlideMenuModule } from 'primeng/slidemenu';
 import { SliderModule } from 'primeng/slider';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { SpinnerModule } from 'primeng/spinner';
 import { SplitButtonModule } from 'primeng/splitbutton';
+import { SplitterModule } from 'primeng/splitter';
 import { StepsModule } from 'primeng/steps';
-import { TableModule } from 'primeng/table';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
 import { TagModule } from 'primeng/tag';
 import { TerminalModule } from 'primeng/terminal';
@@ -61,39 +73,56 @@ import { ToastModule } from 'primeng/toast';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { ToolbarModule } from 'primeng/toolbar';
 import { TooltipModule } from 'primeng/tooltip';
+import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 import { TreeModule } from 'primeng/tree';
+import { TreeSelectModule } from 'primeng/treeselect';
 import { TreeTableModule } from 'primeng/treetable';
+import { AnimateModule } from 'primeng/animate';
+import { CardModule } from 'primeng/card';
+import { BlockUIModule } from 'primeng/blockui';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+
 import {NgModule} from "@angular/core";
 
 
 @NgModule({
   exports: [
+    AvatarModule,
+    AvatarGroupModule,
     AccordionModule,
     AutoCompleteModule,
-    AvatarModule,
     BadgeModule,
-    BlockUIModule,
     BreadcrumbModule,
+    BlockUIModule,
     ButtonModule,
     CalendarModule,
-    CardModule,
     CarouselModule,
+    CascadeSelectModule,
+    ChartModule,
     CheckboxModule,
+    ChipsModule,
     ChipModule,
     ColorPickerModule,
     ConfirmDialogModule,
     ContextMenuModule,
+    VirtualScrollerModule,
     DataViewModule,
     DialogModule,
     DividerModule,
+    DockModule,
     DropdownModule,
+    DynamicDialogModule,
     FieldsetModule,
     FileUploadModule,
+    GalleriaModule,
+    InplaceModule,
     InplaceModule,
     InputMaskModule,
-    InputNumberModule,
     InputSwitchModule,
     InputTextModule,
+    InputTextareaModule,
+    InputNumberModule,
+    ImageModule,
     KnobModule,
     ListboxModule,
     MegaMenuModule,
@@ -108,16 +137,21 @@ import {NgModule} from "@angular/core";
     PanelModule,
     PanelMenuModule,
     PasswordModule,
+    ProgressSpinnerModule,
     ProgressBarModule,
     RadioButtonModule,
     RatingModule,
-    RippleModule,
-    ScrollPanelModule,
-    ScrollTopModule,
     SelectButtonModule,
     SidebarModule,
+    ScrollerModule,
+    ScrollPanelModule,
+    ScrollTopModule,
     SkeletonModule,
+    SlideMenuModule,
     SliderModule,
+    SpeedDialModule,
+    SpinnerModule,
+    SplitterModule,
     SplitButtonModule,
     StepsModule,
     TableModule,
@@ -131,8 +165,12 @@ import {NgModule} from "@angular/core";
     ToggleButtonModule,
     ToolbarModule,
     TooltipModule,
+    TriStateCheckboxModule,
     TreeModule,
-    TreeTableModule
+    TreeSelectModule,
+    TreeTableModule,
+    AnimateModule,
+    CardModule,
   ]
 })
 

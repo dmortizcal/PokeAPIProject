@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ApiRestService} from "../../services/api-rest.service";
 import {PokemonListModel} from "../../models/PokemonListModel";
 import {MessageService} from "primeng/api";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private apiRest: ApiRestService,
+    private router: Router,
   ) {
   }
 
@@ -66,6 +68,11 @@ export class HomeComponent implements OnInit {
       console.log(error)
     })
   }
+
+  goToPokemon(name: string) {
+    this.router.navigate(['pokemon', name]);
+  }
+
 
   ngOnInit(): void {
     this.loadPokemonList(`pokemon/?offset=0&limit=${this.itemsPerPage}`)

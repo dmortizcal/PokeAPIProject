@@ -6,8 +6,8 @@
     <ng-template pTemplate="header">
       <tr>
         <th>Id</th>
-        <th>Nombre</th>
-        <th>Acciones</th>
+        <th>Name</th>
+        <th>Actions</th>
       </tr>
     </ng-template>
 
@@ -19,10 +19,11 @@
           <span class="ml-1 vertical-align-middle">{{ namePoke(pokemon.name) }}</span>
         </td>
         <td>
-          <p-button icon="pi pi-check" styleClass="p-button-rounded p-button-text"
-                    pTooltip="Detalles"/>
+          <!--<p-button icon="pi pi-check" styleClass="p-button-rounded p-button-text"
+                    pTooltip="Details"/>-->
           <p-button icon="pi pi-window-maximize" styleClass="p-button-rounded p-button-text"
-                    pTooltip="Abrir en otra ventana"/>
+                    pTooltip="Open in another window"
+                    (click)="goToPokemon(pokemon.name)"/>
         </td>
       </tr>
     </ng-template>

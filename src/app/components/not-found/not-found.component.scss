@@ -1,0 +1,62 @@
+body {
+  background-color: #FF9999;
+  width: 100%
+}
+
+.center {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  max-width: 1024px;
+  width: 100%
+}
+
+/* Estilo base para la imagen */
+img {
+  max-width: 100%; /* La imagen no será más ancha que su contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+/* Cambiar el tamaño de la imagen en pantallas pequeñas */
+@media (max-width: 768px) {
+  img {
+    width: 90%; /* Por ejemplo, la imagen ocupará el 50% del ancho de la pantalla */
+  }
+}
+
+/* Cambiar el tamaño de la imagen en pantallas medianas */
+@media (min-width: 769px) and (max-width: 1200px) {
+  img {
+    width: 90%; /* Por ejemplo, la imagen ocupará el 70% del ancho de la pantalla */
+  }
+}
+
+/* Mantener el tamaño de la imagen en pantallas grandes */
+@media (min-width: 1201px) {
+  img {
+    width: 40%; /* La imagen ocupará el ancho completo del contenedor */
+  }
+}
+
+.notfound-container {
+  padding: 20px 20px 70px 20px;
+  margin-top: 56px;
+  min-height: calc(100vh - 132px);
+  transition: all 500ms ease-in-out;
+
+  &.open-menu {
+    margin-left: 115px;
+  }
+
+  &.is-open-sub {
+    margin-left: 345px;
+  }
+}
+
+.mat-expansion-panel-body {
+  padding: 0;
+}
+
+.mat-expansion-panel {
+  box-shadow: none !important;
+}

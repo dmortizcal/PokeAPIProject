@@ -2,6 +2,8 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {BaseComponent} from "./components/base/base.component";
 import {HomeComponent} from "./components/home/home.component";
+import {PokemonComponent} from "./components/pokemon/pokemon.component";
+import {NotFoundComponent} from "./components/not-found/not-found.component";
 
 const routes: Routes = [
   {
@@ -11,7 +13,19 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
+      },
+      {
+        path: 'pokemon/:name',
+        component: PokemonComponent
       }]
+  },
+  {
+    path: 'no-encontrado',
+    component: NotFoundComponent,
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   }
 ];
 

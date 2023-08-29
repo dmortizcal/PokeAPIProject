@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'primeng/resources/themes/saga-blue/theme.css';
 @import 'primeng/resources/primeng.min.css';
+@import 'primeflex/primeflex.scss';
 @import 'primeicons/primeicons.css';
 
 html,
@@ -22,3 +23,11 @@ body {
     max-width: 1240px;
   }
 }
+
+.card {
+  background: var(--surface-card);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+

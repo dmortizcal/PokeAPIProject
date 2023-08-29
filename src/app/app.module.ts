@@ -9,6 +9,8 @@ import { BaseComponent } from './components/base/base.component';
 import { HeaderComponent } from './components/base/header/header.component';
 import { FooterComponent } from './components/base/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomeComponent } from './components/home/home.component';
     BaseComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    PokemonComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
