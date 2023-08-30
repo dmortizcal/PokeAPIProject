@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="poke-font">Evolution Chains</h1>
+  <br/>
+
+  <div class="grid">
+    <div class="col-12 md:col-6 lg:col-4" *ngFor="let evolution of evolutionList">
+      <p-card header="Evolution {{namePoke(evolution?.species ?? '')}}" class="card">
+        <ng-template pTemplate="header">
+          <div class="flex align-items-center justify-content-center">
+            <img alt="img poke" src="{{evolution.img_url}}" style="width: 150px"/>
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+          <div class="flex align-items-end justify-content-end">
+            <p-button label=" Details" icon="pi pi-arrow-right"
+                      (click)="goToEvolution(evolution?.species ?? '')"/>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+
+  <p-paginator
+    [rows]="itemsPerPage"
+    [totalRecords]="totalCount"
+    [pageLinkSize]="3"
+    [rowsPerPageOptions]="[12, 24, 48, 96]"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="{{currentPageReport}}"
+    (onPageChange)="onPageChange($event)"/>
+</div>

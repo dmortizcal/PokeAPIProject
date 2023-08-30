@@ -3,7 +3,7 @@
   <br/>
 
   <div class="grid">
-    <div class="col-6 md:col-4 lg:col-3" *ngFor="let pokemon of pokemonList">
+    <div class="col-12 md:col-6 lg:col-4" *ngFor="let pokemon of pokemonList">
       <p-card header="{{namePoke(pokemon?.name ?? '')}}" class="card">
         <ng-template pTemplate="header">
           <div class="flex align-items-center justify-content-center">
@@ -18,7 +18,7 @@
         </div>
         <ng-template pTemplate="footer">
           <div class="flex align-items-end justify-content-end">
-            <p-button label="View Details" icon="pi pi-check"
+            <p-button label="Details" icon="pi pi-arrow-right"
                       (click)="goToPokemon(pokemon.name ?? '')"/>
           </div>
         </ng-template>
@@ -30,6 +30,9 @@
     [rows]="itemsPerPage"
     [totalRecords]="totalCount"
     [pageLinkSize]="3"
+    [rowsPerPageOptions]="[12, 24, 48, 96]"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="{{currentPageReport}}"
     (onPageChange)="onPageChange($event)"/>
 
 </div>

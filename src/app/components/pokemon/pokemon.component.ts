@@ -22,10 +22,17 @@ export class PokemonComponent implements OnInit {
   }
 
   onPageChange(event: any): void {
+    this.itemsPerPage = event.rows
     this.currentPage = event.page + 1;
     const offset = this.currentPage * this.itemsPerPage - this.itemsPerPage;
     const url = `pokemon?offset=${offset}&limit=${this.itemsPerPage}`;
     this.loadPokemonList(url);
+  }
+
+  get currentPageReport(): string {
+    const first = (this.currentPage - 1) * this.itemsPerPage + 1;
+    const last = Math.min(this.currentPage * this.itemsPerPage, this.totalCount);
+    return `Showing ${first} to ${last} of ${this.totalCount} entries`
   }
 
   namePoke(name: string): string {

@@ -1,0 +1,40 @@
+<div class="container">
+  <div *ngIf="loading" class="flex align-items-center justify-content-center">
+    <p-progressSpinner/>
+  </div>
+
+  <div *ngIf="!loading">
+    <h1 class="poke-font">Evolution Chains: {{namePoke(namePokemon)}}</h1>
+    <br/>
+
+    <div class="grid">
+      <div class="col-12 md:col-6 lg:col-6" *ngFor="let evolution of listEvolutions">
+
+        <div class="grid div-content">
+          <div class="col-4 md:col-4 lg:col-4 flex align-items-center justify-content-center">
+            <img alt="img poke" src="{{evolution.image}}" style="width: 150px"/>
+          </div>
+          <div class="col-6 md:col-6 lg:col-6">
+            <h1>{{namePoke(evolution.name)}}</h1>
+            <h2>Types</h2>
+            <div style="display: flex; flex-wrap: wrap">
+          <span *ngFor="let type of evolution.types" class="customer-badge status-{{type.type.name}}"
+                style="margin-right: 5px">
+            {{namePoke(type.type.name ?? '')}}
+          </span>
+            </div>
+          </div>
+          <div class="col-2 md:col-2 lg:col-2">
+            <div class="card">
+              <div class="flex align-content-end justify-content-end flex-wrap card-container">
+                <p-button styleClass="p-button-rounded" icon="pi pi-arrow-right"
+                          (click)="goToPokemon(evolution.name ?? '')"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

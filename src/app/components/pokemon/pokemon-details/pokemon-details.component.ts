@@ -9,7 +9,7 @@ import {StatModel} from "../../../models/StatModel";
   templateUrl: './pokemon-details.component.html',
   styleUrls: ['./pokemon-details.component.scss']
 })
-export class PokemonDetailsComponent implements OnInit{
+export class PokemonDetailsComponent implements OnInit {
   loading: boolean = false
   dataChart: any;
   optionsChart: any;
@@ -77,10 +77,8 @@ export class PokemonDetailsComponent implements OnInit{
     }
   }
 
-  ngOnInit() {
-    const name = this.route.snapshot.paramMap.get('name');
+  getPokemonDetails(name: any) {
     this.loading = true;
-
     this.apiRest.get(`pokemon/${name}`).then(
       (data: any) => {
         this.pokemon = data as PokemonModel
@@ -95,5 +93,10 @@ export class PokemonDetailsComponent implements OnInit{
       this.loading = false
       console.log(error)
     })
+  }
+
+  ngOnInit() {
+    const name = this.route.snapshot.paramMap.get('name');
+    this.getPokemonDetails(name);
   }
 }

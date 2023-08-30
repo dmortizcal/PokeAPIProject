@@ -17,7 +17,24 @@
         </p>
         <ng-template pTemplate="footer">
           <div class="flex align-items-end justify-content-end">
-            <p-button label="Go" icon="pi pi-check" routerLink="/pokemon"/>
+            <p-button label="Go" icon="pi pi-arrow-right" routerLink="/pokemon"/>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-4">
+      <p-card header="Evolution Chain" class="card">
+        <ng-template pTemplate="header">
+          <img alt="img evolution" src="/assets/images/evolution.png"/>
+        </ng-template>
+        <p>
+          Evolution chains are essentially family trees. They start with the lowest stage within a family and detail
+          evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.
+        </p>
+        <ng-template pTemplate="footer">
+          <div class="flex align-items-end justify-content-end">
+            <p-button label="Go" icon="pi pi-arrow-right" routerLink="/evolution"/>
           </div>
         </ng-template>
       </p-card>
@@ -34,7 +51,7 @@
         </p>
         <ng-template pTemplate="footer">
           <div class="flex align-items-end justify-content-end">
-          <p-button label="Go" icon="pi pi-check"  routerLink="/abilities"/>
+            <p-button label="Go" icon="pi pi-arrow-right" routerLink="/abilities"/>
           </div>
         </ng-template>
       </p-card>
@@ -52,7 +69,7 @@
         </p>
         <ng-template pTemplate="footer" class>
           <div class="flex align-items-end justify-content-end">
-            <p-button label="Go" icon="pi pi-check"  routerLink="/types"/>
+            <p-button label="Go" icon="pi pi-arrow-right" routerLink="/types"/>
           </div>
 
         </ng-template>

@@ -14,6 +14,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PokemonDetailsComponent } from './components/pokemon/pokemon-details/pokemon-details.component';
 import { AbilityComponent } from './components/ability/ability.component';
 import { TypeComponent } from './components/type/type.component';
+import { EvolutionComponent } from './components/evolution/evolution.component';
+import { EvolutionDetailsComponent } from './components/evolution/evolution-details/evolution-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { TypeComponent } from './components/type/type.component';
     NotFoundComponent,
     PokemonDetailsComponent,
     AbilityComponent,
-    TypeComponent
+    TypeComponent,
+    EvolutionComponent,
+    EvolutionDetailsComponent
   ],
   imports: [
     BrowserModule,
