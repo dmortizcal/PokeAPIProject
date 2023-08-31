@@ -38,6 +38,14 @@ export class PokemonDetailsComponent implements OnInit {
     } else return ""
   }
 
+  goToVarieties(name: string) {
+    this.router.navigate(['varieties/', name]);
+  }
+
+  goToEvolutions(name: string) {
+    this.router.navigate(['evolution/', name]);
+  }
+
   newDataChart(stats?: StatModel[]) {
     const labels = stats?.map(item => {
       const name = item.stat.name;

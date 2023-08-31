@@ -1,0 +1,33 @@
+<div class="container">
+  <div *ngIf="loading" class="flex align-items-center justify-content-center">
+    <p-progressSpinner/>
+  </div>
+
+  <div *ngIf="!loading">
+    <h1 class="poke-font">Varieties: {{namePoke(pokemon.name ?? '')}}</h1>
+
+    <div class="grid">
+      <div class="col-12 md:col-6 lg:col-4" *ngFor="let pokemon of pokemonList">
+        <p-card header="{{namePoke(pokemon?.name ?? '')}}" class="card">
+          <ng-template pTemplate="header">
+            <div class="flex align-items-center justify-content-center">
+              <img alt="img poke" src="{{pokemon.image}}" style="width: 150px"/>
+            </div>
+          </ng-template>
+          <div style="display: flex; flex-wrap: wrap">
+          <span *ngFor="let type of pokemon.types" class="customer-badge status-{{type.type.name}}"
+                style="margin-right: 5px">
+            {{namePoke(type.type.name ?? '')}}
+          </span>
+          </div>
+          <ng-template pTemplate="footer">
+            <div class="flex align-items-end justify-content-end">
+             <p-button label="Details" icon="pi pi-arrow-right"
+                        (click)="goToPokemon(pokemon.name ?? '')"/>
+            </div>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>

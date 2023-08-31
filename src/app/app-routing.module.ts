@@ -9,6 +9,7 @@ import {AbilityComponent} from "./components/ability/ability.component";
 import {TypeComponent} from "./components/type/type.component";
 import {EvolutionComponent} from "./components/evolution/evolution.component";
 import {EvolutionDetailsComponent} from "./components/evolution/evolution-details/evolution-details.component";
+import {VarietiesComponent} from "./components/varieties/varieties.component";
 
 const routes: Routes = [
   {
@@ -34,6 +35,9 @@ const routes: Routes = [
       {
         path: 'evolution/:name',
         component: EvolutionDetailsComponent
+      },{
+        path: 'varieties/:name',
+        component: VarietiesComponent
       },
       {
         path: 'abilities',

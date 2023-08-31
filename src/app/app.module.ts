@@ -16,6 +16,7 @@ import { AbilityComponent } from './components/ability/ability.component';
 import { TypeComponent } from './components/type/type.component';
 import { EvolutionComponent } from './components/evolution/evolution.component';
 import { EvolutionDetailsComponent } from './components/evolution/evolution-details/evolution-details.component';
+import { VarietiesComponent } from './components/varieties/varieties.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EvolutionDetailsComponent } from './components/evolution/evolution-deta
     AbilityComponent,
     TypeComponent,
     EvolutionComponent,
-    EvolutionDetailsComponent
+    EvolutionDetailsComponent,
+    VarietiesComponent
   ],
   imports: [
     BrowserModule,

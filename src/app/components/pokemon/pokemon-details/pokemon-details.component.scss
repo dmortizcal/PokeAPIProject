@@ -42,3 +42,26 @@
   display: inline-block;
   margin: 5px;
 }
+
+:host ::ng-deep {
+  .p-button {
+    max-width: 1024px;
+    width: 100%;
+    color: white;
+    background-color: $primary;
+    border: 1px solid $primary;
+    transition: $primary;
+  }
+
+  .p-button:hover {
+    background-color: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+.div-content {
+  background-color: white; /* Color de fondo del div */
+  margin: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}

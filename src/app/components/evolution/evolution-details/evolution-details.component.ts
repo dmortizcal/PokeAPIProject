@@ -39,10 +39,12 @@ export class EvolutionDetailsComponent implements OnInit {
         this.loading = false
       }, error => {
         this.loading = false
+        this.router.navigate(['no-encontrado'])
         console.log(error)
       }
     ).catch(error => {
       this.loading = false
+      this.router.navigate(['no-encontrado'])
       console.log(error)
     })
   }

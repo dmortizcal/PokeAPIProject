@@ -2,6 +2,7 @@ import {AbilityModel} from "./AbilityModel";
 import {StatModel} from "./StatModel";
 import {MoveModel} from "./MoveModel";
 import {TypeModel} from "./TypeModel";
+import {BasicModel} from "./BasicModel";
 
 export interface PokemonModel {
   "id"?: number
@@ -11,6 +12,7 @@ export interface PokemonModel {
   "height"?: number
   "location_area_encounters"?: string
   "moves"?: MoveModel[]
+  "species"?: BasicModel;
   "stats"?: StatModel[]
   "types"?: TypeModel[]
   "sprites": {
